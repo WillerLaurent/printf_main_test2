@@ -6,7 +6,7 @@
 /*   By: lwiller <lwiller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:45:14 by lwiller           #+#    #+#             */
-/*   Updated: 2021/02/03 08:13:31 by lwiller          ###   ########lyon.fr   */
+/*   Updated: 2021/02/03 12:53:40 by lwiller          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 //#include <limits.h>
 #define LONG_MAX 2147483647
 #define LONG_MIN -2147483648
+
+int a;
+int b;
 
 int main(void)
 {
@@ -262,13 +265,13 @@ int main(void)
 	ret = printf("Lui : |%d|", 12354);
 	printf("LuiR : ret = |%d|\n", ret);
 	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
-
+//40
 	ret = ft_printf("Moi : |%*.17d|", 25, 12354);
 	ft_printf("MoiR : ret = |%d|\n", ret);
 	ret = printf("Lui : |%*.17d|", 25, 12354);
 	printf("LuiR : ret = |%d|\n", ret);
 	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
-//40
+
 	ret = ft_printf("Moi : |%.15d|", 10);
 	ft_printf("MoiR : ret = |%d|\n", ret);
 	ret = printf("Lui : |%.15d|", 10);
@@ -789,13 +792,13 @@ int main(void)
 	ret = printf("Lui : |%0*d|", -10, 0);
 	printf("LuiR : ret = |%d|\n", ret);
 	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
-//120	
+	
 	ret = ft_printf("Moi : |%.*d|", -10, 42);
 	ft_printf("MoiR : ret = |%d|\n", ret);
 	ret = printf("Lui : |%.*d|", -10, 42);
 	printf("LuiR : ret = |%d|\n", ret);
 	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
-	
+//120	
 	ret = ft_printf("Moi : |%.*d|", -10, 0);
 	ft_printf("MoiR : ret = |%d|\n", ret);
 	ret = printf("Lui : |%.*d|", -10, 0);
@@ -814,9 +817,9 @@ int main(void)
 	printf("LuiR : ret = |%d|\n", ret);
 	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
 
-	ret = ft_printf("Moi : |%*.*d|", 5, 0, 0);
+	ret = ft_printf("Moi : |%*d|", 3, -42);
 	ft_printf("MoiR : ret = |%d|\n", ret);
-	ret = printf("Lui : |%*.*d|", 5, 0, 0);
+	ret = printf("Lui : |%*d|", 3, -42);
 	printf("LuiR : ret = |%d|\n", ret);
 	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
 
@@ -861,7 +864,7 @@ int main(void)
 	ret = printf("Lui : |%-10.0x|", 65535);
 	printf("LuiR : ret = |%d|\n", ret);
 	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
-
+	
 	ret = ft_printf("Moi : |%-10.0x|", 655);
 	ft_printf("MoiR : ret = |%d|\n", ret);
 	ret = printf("Lui : |%-10.0x|", 655);
@@ -913,6 +916,25 @@ int main(void)
 	ret = printf("Lui : |%5.s| |%5.s|", (char *)42, "SLT");
 	printf("LuiR : ret = |%d|\n", ret);
 	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
+	
+//139 à 164
+	a = -5;
+	while (a < 8)
+	{
+	ret = ft_printf("Moi : |%*c|", a, 0);
+	ft_printf("MoiR : ret = |%d|\n", ret);
+	ret = printf("Lui : |%*c|", a, 0);
+	printf("LuiR : ret = |%d|\n", ret);
+	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
+	
+
+	ret = ft_printf("Moi : |%*p|", a, NULL);
+	ft_printf("MoiR : ret = |%d|\n", ret);
+	ret = printf("Lui : |%*p|", a, NULL);
+	printf("LuiR : ret = |%d|\n", ret);
+	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
+	a++;
+	}
 
 	/*while (1)
 	{}*/
