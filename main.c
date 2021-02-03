@@ -6,11 +6,11 @@
 /*   By: lwiller <lwiller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:45:14 by lwiller           #+#    #+#             */
-/*   Updated: 2021/02/03 08:06:34 by lwiller          ###   ########lyon.fr   */
+/*   Updated: 2021/02/03 08:13:31 by lwiller          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Printfv1/ft_printf.h"
+#include "ft_printf.h"
 #include <stdio.h>
 //#include <limits.h>
 #define LONG_MAX 2147483647
