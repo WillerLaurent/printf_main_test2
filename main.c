@@ -6,7 +6,7 @@
 /*   By: lwiller <lwiller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:45:14 by lwiller           #+#    #+#             */
-/*   Updated: 2021/02/03 12:53:40 by lwiller          ###   ########lyon.fr   */
+/*   Updated: 2021/02/04 09:02:17 by lwiller          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -871,7 +871,7 @@ int main(void)
 	printf("LuiR : ret = |%d|\n", ret);
 	i++;ft_printf("i = %d\n\n-------------------\n\n", i);
 
-	ret = ft_printf("Moi : |%-010d|", 42);
+	ret = ft_printf("Moi : |%-10d|", 42);
 	ft_printf("MoiR : ret = |%d|\n", ret);
 	ret = printf("Lui : |%-10d|", 42);
 	printf("LuiR : ret = |%d|\n", ret);
